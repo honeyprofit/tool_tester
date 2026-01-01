@@ -1,0 +1,8 @@
+
+{
+  "name": "Aegis Quantum Login",
+  "description": "A high-end, futuristic authentication interface featuring glassmorphism, neon aesthetics, and AI-driven security diagnostics.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
