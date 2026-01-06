@@ -78,8 +78,6 @@ function clearCompleted() {
 // Filter todos
 function getFilteredTodos() {
     switch (currentFilter) {
-        case 'active':
-            return todos.filter(t => !t.completed);
         case 'completed':
             return todos.filter(t => t.completed);
         default:

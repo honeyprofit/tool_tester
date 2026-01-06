@@ -1,33 +1,60 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <title>InstaTodo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>My Todo List</h1>
-        </header>
+    <div class="app-shell">
+        <div class="phone">
+            <header class="ig-topbar">
+                <div class="logo">InstaTodo</div>
+                <div class="top-actions">
+                    <button class="icon-btn" aria-label="Create">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Activity">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 11c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
 
-        <div class="input-section">
-            <input type="text" id="todo-input" placeholder="Add a new task..." />
-            <button id="add-btn">Add</button>
-        </div>
+            <section class="profile-strip">
+                <div class="avatar-ring">
+                    <div class="avatar"></div>
+                </div>
+                <div class="profile-meta">
+                    <p class="handle">@my.tasks</p>
+                    <p class="status">Daily tasks, styled like a feed.</p>
+                </div>
+                <button class="follow-btn">New</button>
+            </section>
 
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="active">Active</button>
-            <button class="filter-btn" data-filter="completed">Completed</button>
-        </div>
+            <section class="composer">
+                <label class="input-wrap">
+                    <span class="composer-label">Create a post</span>
+                    <input type="text" id="todo-input" placeholder="Add a new task..." />
+                </label>
+                <button id="add-btn" class="add-btn">Post</button>
+            </section>
 
-        <ul id="todo-list" class="todo-list"></ul>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
 
-        <div class="footer">
-            <span id="todo-count">0 items left</span>
-            <button id="clear-completed">Clear Completed</button>
+            <ul id="todo-list" class="todo-list feed"></ul>
+
+            <div class="footer">
+                <span id="todo-count">0 items left</span>
+                <button id="clear-completed">Clear Completed</button>
+            </div>
         </div>
     </div>
 
